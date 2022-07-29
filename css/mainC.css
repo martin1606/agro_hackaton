@@ -155,7 +155,7 @@ footer{
     transition: background-color 2s ease-out;
   }
   .dadosCadastrados{
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
   }

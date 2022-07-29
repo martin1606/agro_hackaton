@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+html{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    position: relative;
+}
+
+.header{
+    height: 70px;
+    grid-row: 1 / span 1;
+}
+
+.articles{
+    position: relative;
+    width: 100%;
+    grid-row: 2 / span 1;
+}
+
+footer{
+    grid-row: 3 / span 1;
+}
+
+.articles{
+    width: 80%;
+    margin: auto;
+    font-family: Montserrat;
+    
+}
+
+.articleA{
+    text-align: center;
+    margin: 50px 30px 0 30px;
+}
+.articleA address{
+    font-size: 0.7em;
+}
+
+.articleA h1{
+    font-size: 1.6em;
+}
+.articleA h2{
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.contImgA{
+    position: relative;
+    height: 370px;
+}
+
+.articleA img{
+    box-shadow: 5px 5px 15px black;
+    object-fit: cover;
+    height: 250px;
+}
+
+.imgAa{
+    margin-top: 20px;
+    position: absolute;
+    width: 400px;
+    right: 47%;
+    z-index: 0;
+}
+.imgAb{
+    margin-top: 100px;
+    position: absolute;
+    width: 400px;
+    left: 47%;
+    z-index: 1; 
+}
+.imgAd{
+    position: absolute;
+    left: 0px;
+    width: 220px;
+    margin-top: 150px;
+    object-position: -60px;
+    object-fit: cover;
+}
+.relativeImg{
+    position: relative;
+}
+
+.articleAB{
+    margin-left: 40%;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+.articleAB p{
+    margin: 20px 0;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.fraseinfarm{
+    border: 1px solid rgb(199, 129, 33);
+    width: 200px;
+    position: absolute;
+    font-size: 0.8em;
+    left: 50px;
+    bottom: 350px;
+    box-shadow: 0 0 4px rgb(199, 129, 33);
+    text-transform: uppercase;
+}
+.relativefrase{
+    position: relative;
+}
+.imgAc{
+    position: absolute;
+    width: 300px;
+    left: -40px;
+    bottom: 80px;
+    z-index: 0;
+}
+
+
+@media only screen and (max-width:800px){
+    .imgAa{
+        right: 15%;
+        width: 350px;
+    }
+    .imgAb{
+        width: 350px;
+        margin-top: 180px;
+        left: 15%;
+    }
+    .contImgA{
+        position: relative;
+        height: 440px;
+    }
+
+    .articleAB{
+        margin-left: 30%;
+    }
+    .articleAB p{
+        font-size: 0.8em;
+    }
+    .fraseinfarm{
+        left: -30px;
+        width: 150px;
+    }
+    .imgAc{
+        display: none;
+    }
+    .imgAd{
+        left: 0px;
+        width: 100px;
+        object-position: -120px;
+    }
+}
+
+@media only screen and (max-width:460px){
+    .imgAa{
+        right: 15%;
+        width: 200px;
+    }
+    .imgAb{
+        width: 200px;
+        margin-top: 130px;
+        left: 15%;
+    }
+    .contImgA{
+        position: relative;
+        height: 380px;
+    }
+    .articleAB{
+        margin-left: 0%;
+    }
+    .articleAB p{
+        font-size: 0.7em;
+    }
+    .fraseinfarm{
+        display: none;
+    }
+    .imgAd{
+        display: none;
+    }
+}

@@ -1,0 +1,168 @@
+
+#main{
+    display: block;
+}
+
+.mainPrincipal{
+    height: 800px;
+}
+.signOpacity, .sign{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+}
+
+.signOpacity{
+    opacity: .6;
+    background-color: black;
+    z-index: 0;
+}
+
+.sign{
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.textMain{   
+    padding: 110px 30px 30px 30px;
+    text-align: center;
+    font-size: 2.3em;
+    font-family: Comfortaa, Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    color: white;
+    z-index: 2;
+}
+
+.buttonSM{
+    position: absolute;
+    font-size: 1.2em;
+    border-radius: 15px;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    background-color: #046f90;
+    color: white;
+    top: 265px;
+    width: 240px;
+    height: 70px;
+    transition: .3s;
+    font-family: Roboto, Verdana;
+}
+.buttonSM:hover, .produtorB:hover, .armazemB:hover{
+    transform: scale(1.03);
+}
+.armazemB, .produtorB{
+    position: absolute;
+    font-size: 1.2em;
+    border-radius: 15px;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+    background-color: #046f90;
+    top: 200px;
+    width: 240px;
+    height: 70px;
+    transition: .3s;
+    display: none;
+}
+.produtorB{
+    right: 15%;
+}
+.armazemB{
+    left: 15%;
+}
+.armazemB a, .produtorB a{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.cardBox{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    /*background-color: blue;*/
+    top: 200px;
+}
+
+.cardBox > div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 500px;
+    width: 320px;
+    /*border: 2px solid black;*/
+    border-radius: 20px;
+    
+}
+
+.cardBox img{
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+    cursor: pointer;
+    transition: .5s;
+}
+.cardBox img:hover{
+    transform: scale(1.02);
+}
+
+
+.cardb{
+    z-index: 2;
+}
+
+.relativeFooter{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+@media only screen and (max-width:1091px){
+    #main{
+        height: 1300px;   
+    }
+}
+
+@media only screen and (max-width:731px){
+    .buttonSM{
+        top: 275px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .produtorB, .armazemB{
+        width: 150px;
+        height: 50px;
+        font-size: 0.9em;
+    }
+    .produtorB{
+        right: 10%;
+    }
+    .armazemB{
+        left: 10%;
+    }
+
+    .textMain{
+        font-size: 1.5em;
+    }
+
+    #main{
+        height: 1850px;   
+    }
+
+}

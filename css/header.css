@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+.header {
+  width: 100%;
+  height: 800px;
+}
+
+.lineNav{
+  grid-column: 2 / span 4;
+  margin-top: 70px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+  opacity: 0.4;
+  z-index: -1;
+  position: absolute;
+}
+
+
+.mainImg{
+  
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  height: 800px;
+  object-fit: cover;
+}
+
+.navbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 15% 130px 30px auto 400px auto;
+  height: 70px;
+  width: 100%;
+  z-index: 7;
+}
+.navbarRoll{
+  animation: navbarRoll .5s forwards;
+}
+
+@keyframes navbarRoll{
+  from{
+    background-color: transparent;
+  }
+  to{
+    background-color: rgba(199, 129, 33);  
+  }
+}
+
+.containerMenu{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  /*border: 1px solid black;*/
+  width: 100%;
+  height: 70px;
+}
+
+.logoDiv{
+  grid-column: 2 / span 1;
+  background-color: #046f90;
+  /*border: 1px solid white;*/
+  border-top: 0px;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 82px;
+  transition: .2s;
+}
+.logoDiv:hover{
+  border-radius: 0 0 44px 4px;
+}
+
+.logo {
+  display: block;
+  font-family: Expletus Sans, Comfortaa, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  user-select: none;
+}
+
+.containerMenu{
+  grid-column: 5 / span 1;
+}
+
+.containerMenu > div {
+  /*border: 1px solid red;*/
+  color: white;
+  font-family: Comfortaa, Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+  transition: .5s;
+}
+
+.containerMenu > div:not(:first-child):hover{
+  background-color: rgba(199, 129, 33, 0.75);
+}
+
+.navbar .containerMenu .menuItemHover:hover{
+  background-color: rgba(4, 111, 144, 0.75); 
+}
+
+.containerMenu > div > a {
+  display: flex;
+  font-family: Roboto, Comfortaa, Expletus Sans;
+  color: white;
+  font-size: 0.8em;
+  /*border: 1px solid black;*/
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.containerMenu .buttonmenu{
+  display: none;
+}
+
+.presentationDiv{
+  position: absolute;
+  margin-top: 200px;
+  width: 500px;
+  height: 300px;
+  border-radius: 0 25px 25px 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  justify-content: center;
+}
+
+.presentationDiv > p {
+  z-index: 1;
+  color: white;
+  display: block;
+  font-family: Comfortaa, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 1.7em;
+  opacity: 0;
+  animation: textA .5s forwards;
+  animation-delay: 1.3s;
+  user-select: none;
+}
+
+.textoP4 a{
+  position: absolute;
+  color: white;
+  text-shadow: 0 0 2px rgb(230, 230, 230);
+  transition: .2s;
+  z-index: 2;
+}
+.textoP4 a:hover{
+  transform: scale(1.01);
+  letter-spacing: 0.01em;
+}
+
+
+
+@keyframes textA{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.presentationDivBlack{
+  position: absolute;
+  margin-top: 220px;
+  width: 500px;
+  height: 300px;
+  background-color: black;
+  opacity: 0;
+  border-radius: 0 25px 25px 0;
+  animation: presentationDivBlack .8s forwards;
+  animation-delay: .5s;
+}
+@keyframes presentationDivBlack {
+  from{
+    opacity: 0;
+    left: -20px;
+  }
+  to{
+    opacity: 0.3;
+    left: 0px;
+  }
+}
+#checkbox-menu {
+  position: absolute;
+  opacity: 0;
+}
+
+@media only screen and (max-width:800px){
+  .lineNav{
+    display: none;
+  }
+
+  .logoDiv{
+    height: 70px;
+    border-radius: 0;
+  }
+  .logoDiv:hover{
+    border-radius: 0px;
+  }
+
+  .logo h1{
+    font-size: 1.9em;
+  }
+
+  .navbar {
+    position: fixed;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    z-index: 7;
+    background-color: rgb(199, 129, 33);
+  }
+
+  .containerMenu{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid black;*/
+    height: 350px;
+    position: absolute;
+    right: -100%;
+    background-color: #046f90;
+  }
+  
+  @keyframes containerMenuB {
+    from{
+      display: flex;
+      right: -100%;
+    }
+    to{
+      display: flex;
+      right: 0%;
+    }
+  }
+  @keyframes containerMenuC {
+    from{
+      display: flex;
+      right: 0%;
+    }
+    to{
+      display: flex;
+      right: -100%;
+    }
+  }
+
+  .containerMenu > div:not(:last-child){
+    border-radius: 0;
+    border-bottom: 1px solid white;
+  }
+  .containerMenu > div:first-child{
+    border-radius: 0;
+    border-bottom: 1px solid white;
+    cursor: default;
+  }
+
+  .presentationDivBlack, .presentationDiv{
+    width: 80%;
+    padding: 0 50px 0 50px;
+    justify-content: flex-start;
+    padding-top: 70px;
+  }
+
+  .presentationDiv > p {
+    font-size: 1.5em;
+  }
+ 
+
+  
+
+
+.buttonmenu label{
+  user-select: none;
+}
+.buttonmenu{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  /*border: 1px solid black;*/
+  transition: .5s;
+  z-index: 1;
+}
+.buttonmenuB{
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+label{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+}
+label span{
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: white;
+  border-radius: 30px;
+  transition: 0.25s ease-in-out;
+}
+label span:nth-child(1){
+  top: 0;
+}
+label span:nth-child(2){
+  top: 8px;
+}
+label span:nth-child(3){
+  top: 16px;
+}
+#checkbox-menu:checked + label span:nth-child(1){
+  transform: rotate(-45deg);
+  top: 8px;
+}
+#checkbox-menu:checked + label span:nth-child(2){
+  opacity: 0;
+}
+#checkbox-menu:checked + label span:nth-child(3){
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+
+}
+
+
+
+  
